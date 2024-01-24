@@ -36,6 +36,12 @@ public class Main {
                 ps.setCurrentPosition(0);
             }
 
+             if (ps.getCurrentPosition() >100 ) {
+                ps.setCurrentPosition(100);
+                break;
+            }
+
+
             System.out.println("The current position of player: " + ps.getCurrentPosition());
         }
 
