@@ -8,10 +8,13 @@ public class Main {
 
         Position ps = new Position(0);
         System.out.println("The initial position of player: " + ps.getInitialPosition());
+        int roll=0;
 
         while (ps.getCurrentPosition() < 100) {
 
             int rolledNumber = random.nextInt(6) + 1;
+            roll++;
+            System.out.println("no of times dice rolled: "+roll);
 
             System.out.println("The player rolled: " + rolledNumber);
 
