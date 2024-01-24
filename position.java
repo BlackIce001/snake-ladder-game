@@ -1,19 +1,28 @@
-public class position {
-    int initial_position;
 
+class Position {
+    private int currentPosition;
 
-    position(int x) {
-        this.initial_position=x;
-
-    }
-    public void moveAhead(int position) {
-        initial_position = position+1;
+    public Position(int initialPosition) {
+        this.currentPosition = initialPosition;
     }
 
-    public void moveBehind(int position) {
-        initial_position = position-1;
+    public int getInitialPosition() {
+        return currentPosition;
     }
 
+    public void moveAhead(int positions) {
+        currentPosition += positions;
+    }
 
+    public void moveBehind(int positions) {
+        currentPosition -= positions;
+    }
 
+    public int getCurrentPosition() {
+        return currentPosition;
+    }
+
+    public void setCurrentPosition(int newPosition) {
+        currentPosition = newPosition;
+    }
 }
